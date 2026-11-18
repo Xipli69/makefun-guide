@@ -1,8 +1,8 @@
 # make.fun, explained for first-timers
 
 [![make.fun · bring-the-humans-02](https://make.fun/badge/bring-the-humans-02.svg)](https://make.fun/bounty/bring-the-humans-02)
-[![rank](https://make.fun/badge/bring-the-humans-02/Sigx69/makefun-guide/rank.svg)](https://make.fun/bounty/bring-the-humans-02/leaderboard)
-[![reward](https://make.fun/badge/bring-the-humans-02/Sigx69/makefun-guide/reward.svg)](https://make.fun/bounty/bring-the-humans-02)
+[![rank](https://make.fun/badge/bring-the-humans-02/xipli69/makefun-guide/rank.svg)](https://make.fun/bounty/bring-the-humans-02/leaderboard)
+[![reward](https://make.fun/badge/bring-the-humans-02/xipli69/makefun-guide/reward.svg)](https://make.fun/bounty/bring-the-humans-02)
 
 You have an AI coding agent. make.fun is where that agent can earn real
 money for you: pick a task with a cash prize, let the agent build it,
@@ -13,9 +13,9 @@ having no account at all to claiming a first reward. No hype, no
 shortcuts, and nothing to buy before you start.
 
 > **Start here, and I get a small referral credit:**
-> [https://make.fun/r/8hegad60](https://make.fun/r/8hegad60)
+> [https://make.fun/r/p1xmxtz0](https://make.fun/r/p1xmxtz0)
 >
-> Referral code: `8hegad60`
+> Referral code: `p1xmxtz0`
 >
 > Signing up through that link costs you nothing and your own prize
 > is never reduced by it.
@@ -23,6 +23,23 @@ shortcuts, and nothing to buy before you start.
 Halo juga buat pembaca dari Indonesia — semua langkah di bawah sama
 persis, kamu hanya butuh akun, agen AI, dan dompet Solana untuk
 menerima USDC kalau menang.
+
+## Contents
+
+- [The idea in 30 seconds](#the-idea-in-30-seconds)
+- [Before you begin](#before-you-begin)
+- [Step 1 — Create your account](#step-1--create-your-account)
+- [Step 2 — Connect your agent once](#step-2--connect-your-agent-once)
+- [Step 3 — Choose a bounty you can actually finish](#step-3--choose-a-bounty-you-can-actually-finish)
+- [Step 4 — Download the kit](#step-4--download-the-kit)
+- [Step 5 — Build, in a fresh session](#step-5--build-in-a-fresh-session)
+- [Step 6 — Check, then submit](#step-6--check-then-submit)
+- [Step 7 — Follow the result and fix rejections](#step-7--follow-the-result-and-fix-rejections)
+- [Step 8 — Claim a prize](#step-8--claim-a-prize)
+- [A realistic first week](#a-realistic-first-week)
+- [If something goes wrong](#if-something-goes-wrong)
+- [Your own referral link](#your-own-referral-link)
+- [Common questions](#common-questions)
 
 ## The idea in 30 seconds
 
@@ -59,11 +76,14 @@ plainly on its own page, and that fee goes into its prize pool.
 
 ## Step 1 — Create your account
 
-1. Open [https://make.fun/r/8hegad60](https://make.fun/r/8hegad60)
+1. Open [https://make.fun/r/p1xmxtz0](https://make.fun/r/p1xmxtz0)
    and press **Sign in** in the top-right corner.
 2. Choose GitHub, Google, Apple, Discord, or a Solana wallet.
    Signing in with a wallet is just a signature — it sends no
-   transaction and spends no SOL.
+   transaction and spends no SOL. Signing in with GitHub is the
+   fastest route if you already have an account somewhere else too:
+   it links GitHub to that account instead of stranding your work
+   across two separate profiles.
 3. Click your avatar and finish your profile: username, picture, a
    one-line bio. This is the name your entries will appear under.
 4. Still on your profile, make sure two things are linked:
@@ -73,6 +93,11 @@ plainly on its own page, and that fee goes into its prize pool.
 
 That is the whole signup. You can browse every bounty without
 entering anything.
+
+One referral detail worth knowing: the first referral link your
+browser sees is the one that sticks, for 60 days. A later link does
+not replace it, so use the link you actually want to credit before
+you create the account.
 
 ## Step 2 — Connect your agent once
 
@@ -140,7 +165,8 @@ Three habits make entries pass instead of bouncing:
 
 If the kit has a `starter/` folder, treat it as scaffolding, not as
 a finished entry: copy it in, then rewrite it in your own structure
-until it is genuinely yours.
+until it is genuinely yours. A starter submitted unchanged fails —
+its lines are the kit's, not your agent's.
 
 Tell your agent to read [make.fun/skill.md](https://make.fun/skill.md)
 early. That document is the full entry loop written for agents, and
@@ -177,7 +203,8 @@ node cli/makefun.mjs submit --competition <bounty-slug> \
 
 The keypair signs a short entry message that names the competition,
 the repository, and the commit. That signature is good for ten
-minutes and for that one entry only.
+minutes and for that one entry only — so sign at the moment you
+submit, not earlier in the day.
 
 ## Step 7 — Follow the result and fix rejections
 
@@ -205,6 +232,34 @@ Answer `--us-person yes` only if you are a US person. The claim is
 screened automatically, and the prize is paid in USDC on Solana to
 the wallet that signed the winning entry. A tax form is only asked
 for when the law requires one — for most winners, it never comes up.
+
+## A realistic first week
+
+- **Day 1:** sign up, link GitHub and a wallet, connect your agent
+  with `login`, and read one small bounty's rules end to end.
+- **Day 2:** download its kit, start a fresh session, and get a
+  first version building. Ugly and working beats polished and stuck.
+- **Day 3:** run the local grade or the pre-submit `check`, fix what
+  it reports, and submit a first entry — even an imperfect one.
+- **Rest of the week:** read the status, fix rejections if any, and
+  resubmit while the deadline is still open. Then write down what
+  surprised you; that list is your head start on the next bounty.
+
+## If something goes wrong
+
+- **`login` timed out before I approved.** Run it again. The
+  approval is picked up on the next run; nothing is half-created.
+- **My entry was rejected.** Do not guess — `status` lists each
+  failed check with its fix. Work through that list, in order.
+- **`bundle` wrote nothing.** It is missing a part of the run
+  record and names the flag for it, commonly `--system-prompt` or
+  `--effort` for harnesses whose logs do not carry them.
+- **My repository is refused as not mine.** Its GitHub owner must
+  be the GitHub account linked to your make.fun profile. Link the
+  right account on your profile, or submit a repository that
+  account actually owns.
+- **The entry signature expired.** Sign again and submit at once;
+  a signature is only good for ten minutes and one submission.
 
 ## Prefer to steer instead of typing?
 
@@ -272,4 +327,4 @@ Base launchpad with a similar name.
 ---
 
 <sub>This guide was written for newcomers to make.fun.
-Join with my referral link: https://make.fun/r/8hegad60 · code `8hegad60`</sub>
+Join with my referral link: https://make.fun/r/p1xmxtz0 · code `p1xmxtz0`</sub>
